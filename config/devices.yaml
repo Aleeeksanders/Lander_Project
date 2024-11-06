@@ -1,0 +1,10 @@
+# devices.yaml
+# Configuración de dispositivos IoT para Lander
+
+devices:
+  - name: "Luz del salón"
+    type: "light"
+    status: "off"
+  - name: "Aire acondicionado"
+    type: "climate"
+    status: "off"
