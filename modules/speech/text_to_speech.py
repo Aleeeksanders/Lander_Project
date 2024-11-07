@@ -4,23 +4,30 @@ from contextlib import closing
 from config.settings import VOICE_ID, LANGUAGE_CODE
 
 class TextToSpeech:
-    def __init__(self, voice_id=VOICE_ID, language_code=LANGUAGE_CODE):
+    def __init__(self, voice_id="Salli", language_code="en-US"):
         self.polly_client = boto3.client('polly')
         self.voice_id = voice_id
         self.language_code = language_code
 
     def speak(self, text):
-        # Envolver el texto en SSML con el ajuste de velocidad
-        ssml_text = f"<speak><prosody rate='110%'>{text}</prosody></speak>"
+        # Envolver el texto en SSML con ajustes para un tono juvenil, suave y expresivo
+        ssml_text = f"""
+        <speak>
+            <prosody rate="135%" pitch="+5%" volume="x-soft">
+                <emphasis level="moderate">{text}</emphasis>
+            </prosody>
+        </speak>
+        """
 
         try:
-            # Solicitar el audio a Polly usando SSML
+            # Solicitar el audio a Polly usando SSML y el motor NTTS
             response = self.polly_client.synthesize_speech(
                 VoiceId=self.voice_id,
                 OutputFormat="pcm",
                 Text=ssml_text,
                 TextType="ssml",  # Especificamos que estamos usando SSML
-                LanguageCode=self.language_code
+                LanguageCode=self.language_code,
+                Engine="neural"  # Activar NTTS
             )
         except self.polly_client.exceptions.InvalidSsmlException as e:
             print("Error en el formato SSML:", e)

@@ -1,3 +1,3 @@
 # Configuraciones para Amazon Polly en TextToSpeech
-VOICE_ID = "Lucia"          # ID de voz de Polly
-LANGUAGE_CODE = "es-ES"     # Código de idioma para Polly
+VOICE_ID = "Salli"          # ID de voz de Polly
+LANGUAGE_CODE = "en-US"     # Código de idioma para Polly
