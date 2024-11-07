@@ -1,5 +1,9 @@
 import openai
 
+import os
+api_key = os.getenv("OPENAI_API_KEY")
+
+
 # Reemplaza 'tu_clave_api_aquí' con tu clave API real
 response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",  # Cambia a 'gpt-4' si tienes acceso
