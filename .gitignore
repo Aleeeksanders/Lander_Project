@@ -1,0 +1,6 @@
+# Ignorar node_modules y otros archivos innecesarios
+node_modules/
+.env
+__pycache__/
+*.pyc
+.DS_Store

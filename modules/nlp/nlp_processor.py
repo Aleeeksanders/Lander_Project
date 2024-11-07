@@ -1,21 +1,18 @@
 class NLPProcessor:
     def __init__(self):
-        # Diccionario de intenciones básicas con palabras clave
-        self.intentions = {
-            "guardar": ["guardar", "almacenar", "recordar"],
-            "controlar_dispositivo": ["encender", "apagar", "activar", "desactivar"],
-            "pregunta": ["qué", "quién", "cómo", "dónde", "por qué"],
-            # Puedes añadir más intenciones según sea necesario
-        }
+        pass
 
     def process_command(self, command):
-        # Convierte el comando a minúsculas para un análisis básico
-        command = command.lower()
-
-        # Detectar intención a partir del comando
-        for intent, keywords in self.intentions.items():
-            if any(keyword in command for keyword in keywords):
-                return intent
-
-        # Si no encuentra ninguna intención específica
-        return "intención_desconocida"
+        # Simulación de respuestas basadas en palabras clave
+        if "hola" in command.lower():
+            return "¡Hola! ¿En qué puedo ayudarte?"
+        elif "encender" in command.lower():
+            return "Encender el dispositivo luz."
+        elif "apagar" in command.lower():
+            return "Apagar el dispositivo luz."
+        elif "guardar" in command.lower():
+            return "Datos guardados correctamente."
+        elif "consulta" in command.lower():
+            return "Consulta en proceso."
+        else:
+            return "Intención desconocida. Por favor, intenta de nuevo."
