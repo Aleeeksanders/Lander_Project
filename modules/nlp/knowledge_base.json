@@ -1,0 +1,56 @@
+{
+    "Hola": {
+        "responses": [
+            "¡Hola! ¿En qué puedo ayudarte?"
+        ],
+        "frequency": 1
+    },
+    "como estas?": {
+        "responses": [
+            "¿Podrías darme más detalles para ayudarte con la información que necesitas?"
+        ],
+        "frequency": 1
+    },
+    "knowledge_base": [
+        {
+            "command": "Hola",
+            "responses": [
+                "¡Hola! ¿En qué puedo ayudarte?"
+            ],
+            "frequency": 1,
+            "context": "general"
+        },
+        {
+            "command": "como estas?",
+            "responses": [
+                "¿Podrías darme más detalles para ayudarte con la información que necesitas?"
+            ],
+            "frequency": 1,
+            "context": "general"
+        },
+        {
+            "command": "git clone https://github.com/facebookresearch/ParlAI.git",
+            "responses": [
+                "No tengo suficiente información para responder eso. ¿Puedes darme más detalles?"
+            ],
+            "frequency": 1,
+            "context": "general"
+        },
+        {
+            "command": "cd ParlAI",
+            "responses": [
+                "No tengo suficiente información para responder eso. ¿Puedes darme más detalles?"
+            ],
+            "frequency": 1,
+            "context": "general"
+        },
+        {
+            "command": "python setup.py install",
+            "responses": [
+                "No tengo suficiente información para responder eso. ¿Puedes darme más detalles?"
+            ],
+            "frequency": 1,
+            "context": "general"
+        }
+    ]
+}
